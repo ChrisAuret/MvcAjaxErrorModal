@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>MvcAjaxErrorModal</h1>
+</div>
+
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg js-employee-list-modal" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+</button>
+
+<script type="text/javascript">
+
+    $(function() {
+
+        (function() {
+            $(".js-employee-list-modal").on("click", showModalEmployeeList);
+
+            function showModalEmployeeList() {
+                $.get("/Employee/ShowModalEmployeeList", function(data) {
+                    $("#modalContainer").html(data).modal("show");
+                }).done(function() {
+                    console.log("done");
+                }).fail(function () {
+                    console.log("fail");
+                    
+                    $("#results").html("<p>An error occured<p>");
+
+                }).always(function() {
+                    console.log("always");
+                });
+            };
+        })();
+    });
+
+</script>
