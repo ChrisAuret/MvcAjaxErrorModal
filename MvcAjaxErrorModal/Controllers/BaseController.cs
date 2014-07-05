@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace AjaxErrorModal.Controllers
+namespace MvcAjaxErrorModal.Controllers
 {
     public class BaseController : Controller
     {

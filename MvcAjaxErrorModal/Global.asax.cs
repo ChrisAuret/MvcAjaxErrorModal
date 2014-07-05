@@ -8,13 +8,14 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Mvc;
+using MvcAjaxErrorModal.App_Start;
 using MvcAjaxErrorModal.ViewModels.Employee;
 using Service;
 using Service.Employee;
 
 namespace MvcAjaxErrorModal
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : HttpApplication
     {
         protected void Application_Start()
         {
@@ -34,7 +35,7 @@ namespace MvcAjaxErrorModal
             builder.RegisterType<EmployeeService>().As<IEmployeeService>();
             builder.RegisterType<EmployeeViewModelMapper>().As<IStartable>();
 
-            var assemblies = Assembly.Load("AjaxErrorModal").GetTypes()
+            var assemblies = Assembly.Load("MvcAjaxErrorModal").GetTypes()
                 .Where(t => (typeof(IStartable)).IsAssignableFrom(t))
                 .Select(a => a.Assembly).ToArray();
 

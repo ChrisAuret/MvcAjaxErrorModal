@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using AjaxErrorModal.Controllers;
 using AutoMapper;
 using Core.Domain;
 using MvcAjaxErrorModal.ViewModels.Employee;

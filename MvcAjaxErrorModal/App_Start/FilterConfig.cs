@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
-namespace MvcAjaxErrorModal
+namespace MvcAjaxErrorModal.App_Start
 {
     public class FilterConfig
     {

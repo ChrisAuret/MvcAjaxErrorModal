@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Core.Domain;
-using Service.Employee;
 
-namespace Service
+namespace Service.Employee
 {
     public class EmployeeService : IEmployeeService
     {
         public List<EmployeeDto> GetEmployees()
         {
-            throw new ApplicationException("Something really bad just happened!");
+            //throw new ApplicationException("Something really bad just happened!");
 
             return new List<EmployeeDto>
             {
